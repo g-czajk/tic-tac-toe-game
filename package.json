@@ -3,13 +3,15 @@
     "version": "1.0.5",
     "description": "OOP Typescript tic-tac-toe game",
     "license": "MIT",
-    "author": "",
+    "author": "g-czajk",
     "main": "webpack.config.babel.js",
+    "homepage": "https://g-czajk.github.io/tic-tac-toe-game/",
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack --config webpack.config.babel.js",
         "profile": "cross-env NODE_ENV=production webpack --profile --json --config webpack.config.babel.js > ./dist/profile.json && webpack-bundle-analyzer ./dist/profile.json",
         "start": "cross-env WEBPACK_IS_DEV_SERVER=true NODE_ENV=development webpack serve --config webpack.config.babel.js",
-        "release": "npm version patch"
+        "release": "npm version patch",
+        "deploy": "gh-pages -d build"
     },
     "husky": {
         "hooks": {
@@ -59,6 +61,7 @@
         "eslint-plugin-react-hooks": "~4.2.0",
         "eslint-webpack-plugin": "~2.2.1",
         "fork-ts-checker-webpack-plugin": "~6.0.1",
+        "gh-pages": "^3.2.3",
         "html-loader": "~1.3.2",
         "html-webpack-plugin": "~5.0.0-alpha.6",
         "husky": "~4.3.0",
