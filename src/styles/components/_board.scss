@@ -1,0 +1,25 @@
+.board {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 4px;
+    width: 50vh;
+    height: 50vh;
+    background-color: black;
+
+    &.disabled {
+        pointer-events: none;
+    }
+
+    .field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fcfcfc;
+        }
+    }
+}

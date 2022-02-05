@@ -1,0 +1,86 @@
+.panel {
+    position: relative;
+    margin: 64px 0;
+
+    .score {
+        .wins {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &_title {
+                margin-bottom: 16px;
+                font-size: 32px;
+                font-weight: 700;
+            }
+            &_players {
+                display: flex;
+                margin-bottom: 16px;
+                .player {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: 24px;
+                    &:nth-child(1) {
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+
+        .draws {
+            margin-bottom: 32px;
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+
+    .game-info {
+        font-size: 48px;
+        font-weight: 700;
+        &.animate {
+            animation: show 1s linear infinite;
+        }
+    }
+
+    .clear {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 1;
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    49% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    74% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
